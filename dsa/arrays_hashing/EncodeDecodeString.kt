@@ -7,7 +7,7 @@
  * Reason: Creating list in decode fun
  */
 
-fun encode(strs: List<String> = listOf<String>("neet", "code", "love", "you")): String {
+fun encode(strs: List<String>): String {
     val word = StringBuilder()
     for (i in 0..strs.size-1){
         word.append(strs[i]).append('#')
@@ -27,12 +27,4 @@ fun decode(str: String): List<String> {
         }
     }
     return list
-}
-
-fun main() {
-    val e = encode()
-    println(e)
-    val d = decode(e)
-    println(d)
-
 }
