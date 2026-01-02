@@ -5,7 +5,7 @@
  * Space Complexity: O(n)
  * Reason: Extra space is used for Set and sorted list.
  */
-fun longestConsecutiveBruteForce(arr: IntArray = intArrayOf(2, 20, 4, 10, 3, 4, 5)): Int {
+fun longestConsecutiveBruteForce(arr: IntArray ): Int {
     val list = arr.toSet().sorted()
     var currentAns = 1
     var maxAns = 1
@@ -26,9 +26,9 @@ fun longestConsecutiveBruteForce(arr: IntArray = intArrayOf(2, 20, 4, 10, 3, 4, 
  * Reason: Each number is processed only once across all sequences.
  *
  * Space Complexity: O(n)
- * Reason: HashMap and recursion stack use extra space.
+ * Reason: HashMap
  */
-fun longestConsecutive(arr: IntArray = intArrayOf(100, 4, 200, 1, 3, 2)): Int {
+fun longestConsecutive(arr: IntArray): Int {
     if (arr.isEmpty()) return 0
 
     val map = mutableMapOf<Int, Boolean>()
